@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Scotiabank Chile | Corporate Tax Brief</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6f8;
+      color: #202124;
+      line-height: 1.6;
+    }
+
+    /* NAVIGATION */
+
+    nav {
+      background: #ffffff;
+      border-bottom: 1px solid #e4e6e8;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .brand {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .brand span {
+      color: #d71920;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      color: #d71920;
+    }
+
+    /* HERO */
+
+    .hero {
+      background: #111827;
+      color: white;
+      padding: 90px 24px 80px;
+    }
+
+    .hero-content {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .eyebrow {
+      color: #ff4b55;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 1.02;
+      max-width: 900px;
+      margin-bottom: 22px;
+    }
+
+    .hero h1 span {
+      color: #ff3b43;
+    }
+
+    .hero-description {
+      max-width: 760px;
+      color: #cbd1dc;
+      font-size: 19px;
+    }
+
+    .hero-meta {
+      margin-top: 45px;
+      display: flex;
+      gap: 35px;
+      flex-wrap: wrap;
+      color: #aeb6c4;
+      font-size: 14px;
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 75px 24px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-label {
+      color: #d71920;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 38px;
+      margin-bottom: 18px;
+      line-height: 1.15;
+    }
+
+    .section-intro {
+      color: #656b73;
+      max-width: 760px;
+      margin-bottom: 40px;
+      font-size: 17px;
+    }
+
+    /* EXECUTIVE CARDS */
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .card-number {
+      color: #d71920;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      font-size: 21px;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: #666d76;
+      font-size: 15px;
+    }
+
+    /* TAX LENS */
+
+    .tax-section {
+      background: #111827;
+      color: white;
+    }
+
+    .tax-section .section-intro {
+      color: #b8c0cc;
+    }
+
+    .tax-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .tax-card {
+      border: 1px solid #374151;
+      border-radius: 12px;
+      padding: 30px;
+      background: #18202d;
+    }
+
+    .tax-tag {
+      display: inline-block;
+      background: #d71920;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-size: 11px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    .tax-card h3 {
+      margin-bottom: 10px;
+      font-size: 21px;
+    }
+
+    .tax-card p {
+      color: #bdc5d1;
+    }
+
+    /* PLACEHOLDER */
+
+    .placeholder {
+      border: 2px dashed #d1d5db;
+      padding: 45px;
+      border-radius: 12px;
+      text-align: center;
+      color: #777;
+      background: #fafafa;
+    }
+
+    /* SOURCE */
+
+    .source-box {
+      background: #fff;
+      border-left: 4px solid #d71920;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    .source-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #090e16;
+      color: #8e98a8;
+      padding: 45px 24px;
+      font-size: 13px;
+    }
+
+    footer .container {
+      display: flex;
+      justify-content: space-between;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 850px) {
+
+      .grid,
+      .tax-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding-top: 65px;
+      }
+
+      h2 {
+        font-size: 31px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav>
+    <div class="nav-container">
+
+      <div class="brand">
+        SCOTIABANK <span>CHILE</span>
+      </div>
+
+      <div class="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#business">Negocio</a>
+        <a href="#structure">Estructura</a>
+        <a href="#financial">Finanzas</a>
+        <a href="#tax">Tax Lens</a>
+        <a href="#sources">Fuentes</a>
+      </div>
+
+    </div>
+  </nav>
+
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="hero-content">
+
+      <div class="eyebrow">
+        Executive Corporate Tax Brief
+      </div>
+
+      <h1>
+        Entender el banco desde una
+        <span>mirada tributaria.</span>
+      </h1>
+
+      <p class="hero-description">
+        Resumen ejecutivo para comprender la estructura empresarial,
+        modelo de negocio y principales magnitudes financieras de
+        Scotiabank Chile desde la perspectiva de Corporate Tax.
+      </p>
+
+      <div class="hero-meta">
+        <div>Período · Junio 2026</div>
+        <div>Base · Estados Financieros Consolidados Intermedios</div>
+        <div>Enfoque · Corporate Tax Onboarding</div>
+      </div>
+
+    </div>
+
+  </header>
+
+
+  <!-- OVERVIEW -->
+
+  <section id="overview">
+
+    <div class="container">
+
+      <div class="section-label">01 · Executive Overview</div>
+
+      <h2>Primero: entender qué estamos mirando.</h2>
+
+      <p class="section-intro">
+        Antes de analizar impuestos es necesario entender la arquitectura
+        económica del banco: quién controla la entidad, qué negocios desarrolla,
+        dónde se generan los resultados y qué sociedades forman parte del grupo.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+          <div class="card-number">01</div>
+          <h3>Grupo empresarial</h3>
+          <p>
+            Identificación de la entidad matriz, controlador,
+            filiales y participaciones relevantes.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">02</div>
+          <h3>Modelo de negocio</h3>
+          <p>
+            Comprensión de los principales segmentos,
+            productos financieros y fuentes de resultados.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-number">03</div>
+          <h3>Lectura tributaria</h3>
+          <p>
+            Conexión entre información financiera y materias
+            potencialmente relevantes para Corporate Tax.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- BUSINESS -->
+
+  <section id="business" style="background:#ffffff">
+
+    <div class="container">
+
+      <div class="section-label">02 · Business Model</div>
+
+      <h2>¿Cómo genera resultados Scotiabank Chile?</h2>
+
+      <p class="section-intro">
+        Esta sección mostrará los segmentos de negocio reportados,
+        su importancia relativa y cómo se conectan con el resultado consolidado.
+      </p>
+
+      <div class="placeholder">
+        Próximo módulo · Segmentos Retail, Wholesale, CAT,
+        Tesorería y Otros + principales cifras a junio de 2026.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- STRUCTURE -->
+
+  <section id="structure">
+
+    <div class="container">
+
+      <div class="section-label">03 · Corporate Structure</div>
+
+      <h2>Mapa societario del grupo.</h2>
+
+      <p class="section-intro">
+        La estructura legal es especialmente relevante para Corporate Tax.
+        Aquí incorporaremos las sociedades consolidadas, porcentajes de
+        participación y función económica de cada entidad.
+      </p>
+
+      <div class="placeholder">
+        Próximo módulo · Organigrama societario interactivo
+        basado en los EEFF consolidados.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINANCIAL -->
+
+  <section id="financial" style="background:#ffffff">
+
+    <div class="container">
+
+      <div class="section-label">04 · Financial Snapshot</div>
+
+      <h2>Las cifras que explican el tamaño del banco.</h2>
+
+      <p class="section-intro">
+        Activos, pasivos, patrimonio, colocaciones, resultados y otras
+        magnitudes serán incorporadas utilizando exclusivamente información
+        financiera pública validada.
+      </p>
+
+      <div class="placeholder">
+        Próximo módulo · KPIs financieros + comparación 2025 / 2026.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TAX -->
+
+  <section id="tax" class="tax-section">
+
+    <div class="container">
+
+      <div class="section-label">05 · Corporate Tax Lens</div>
+
+      <h2>Del estado financiero a la pregunta tributaria.</h2>
+
+      <p class="section-intro">
+        Esta capa no busca reemplazar el análisis tributario interno.
+        Su objetivo es identificar qué materias financieras deberían
+        llamar la atención de alguien que se incorpora a Corporate Tax.
+      </p>
+
+      <div class="tax-grid">
+
+        <div class="tax-card">
+          <div class="tax-tag">Tax Lens</div>
+          <h3>Impuesto a la renta</h3>
+          <p>
+            Conciliación entre resultado financiero, gasto por impuesto
+            y principales componentes tributarios revelados.
+          </p>
+        </div>
+
+        <div class="tax-card">
+          <div class="tax-tag">Tax Lens</div>
+          <h3>Impuestos diferidos</h3>
+          <p>
+            Identificación de activos y pasivos por impuestos diferidos
+            y las diferencias temporarias que explican su composición.
+          </p>
+        </div>
+
+        <div class="tax-card">
+          <div class="tax-tag">Tax Lens</div>
+          <h3>Estructura societaria</h3>
+          <p>
+            Filiales, participaciones y relaciones entre entidades
+            relevantes para comprender el perímetro tributario.
+          </p>
+        </div>
+
+        <div class="tax-card">
+          <div class="tax-tag">Tax Lens</div>
+          <h3>Partidas de atención</h3>
+          <p>
+            Provisiones, deterioros, instrumentos financieros,
+            leasing, intangibles y otras partidas con potencial
+            diferencia financiero-tributaria.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- SOURCES -->
+
+  <section id="sources">
+
+    <div class="container">
+
+      <div class="section-label">06 · Sources & Methodology</div>
+
+      <h2>Trazabilidad de la información.</h2>
+
+      <p class="section-intro">
+        Cada cifra incorporada al análisis será vinculada con su fuente
+        para diferenciar información reportada de cálculos e interpretación.
+      </p>
+
+      <div class="source-box">
+        <strong>Fuente principal</strong>
+        Scotiabank Chile · Estados Financieros Consolidados Intermedios
+        al 30 de junio de 2026.
+      </div>
+
+      <div class="source-box">
+        <strong>Criterio metodológico</strong>
+        Las cifras reportadas por Scotiabank se presentarán separadamente
+        de cálculos propios y observaciones bajo perspectiva Corporate Tax.
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <div>
+        Scotiabank Chile · Corporate Tax Brief
+      </div>
+
+      <div>
+        Análisis elaborado a partir de información pública · Junio 2026
+      </div>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
