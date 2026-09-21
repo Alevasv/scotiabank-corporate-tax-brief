@@ -1,187 +1,46 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Executive Corporate Tax Brief de Scotiabank Chile basado en información financiera pública al 30 de junio de 2026.">
-<title>Scotiabank Chile | Executive Corporate Tax Brief</title>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scotiabank Chile | Corporate Tax Onboarding Map V3</title>
 <style>
-:root{--red:#e31837;--ink:#0d1728;--ink2:#162238;--text:#20242b;--muted:#68707c;--line:#e4e7eb;--bg:#f5f6f8;--white:#fff;--soft:#fff5f6;--green:#13795b}
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}a{color:inherit}
-nav{background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:20}.nav{max-width:1180px;margin:auto;padding:15px 22px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:800;letter-spacing:.2px}.brand span{color:var(--red)}.links{display:flex;gap:20px;flex-wrap:wrap}.links a{text-decoration:none;font-size:13px;color:#4f5660}.links a:hover{color:var(--red)}
-.hero{background:var(--ink);color:#fff;padding:78px 22px}.wrap{max-width:1180px;margin:auto}.eyebrow,.label{color:#ff455d;text-transform:uppercase;letter-spacing:1.7px;font-size:12px;font-weight:800}.hero h1{font-size:clamp(42px,6.3vw,76px);line-height:1.02;max-width:940px;margin:17px 0 22px}.hero h1 span{color:#ff4057}.lead{max-width:820px;color:#c8cfda;font-size:18px}.meta{display:flex;gap:28px;flex-wrap:wrap;margin-top:38px;color:#aeb7c5;font-size:13px}
-section{padding:68px 22px}section.white{background:#fff}h2{font-size:clamp(29px,4vw,42px);line-height:1.13;margin:9px 0 14px}.intro{max-width:850px;color:var(--muted);font-size:16px;margin-bottom:32px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card,.kpi,.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.card h3,.panel h3{font-size:19px;margin:8px 0}.card p,.panel p{color:var(--muted);font-size:14px}.num{color:var(--red);font-size:12px;font-weight:800}.kpi .value{font-size:31px;font-weight:800;letter-spacing:-1px}.kpi .name{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.7px;margin-top:3px}.kpi .note{font-size:12px;color:#818894;margin-top:12px}.source{font-size:11px;color:#8a919b;margin-top:13px}
-.badges{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 20px}.badge{font-size:10px;font-weight:800;letter-spacing:.7px;padding:5px 8px;border-radius:5px}.reported{background:#e9eef6;color:#35445d}.calculated{background:#eaf6f1;color:var(--green)}.tax{background:#ffe8eb;color:#b4102a}
-.segment{border-top:3px solid var(--red)}.segment .profit{font-size:24px;font-weight:800;margin-top:14px}.segment .sub{font-size:12px;color:var(--muted)}
-.dark{background:var(--ink);color:#fff}.dark .intro{color:#b7c0ce}.dark .panel{background:var(--ink2);border-color:#344057}.dark .panel p,.dark .source{color:#b8c1cf}
-.bridge{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:22px;margin:28px 0}.rate{background:#fff;color:var(--text);border-radius:16px;padding:30px;text-align:center}.rate strong{display:block;font-size:52px;line-height:1;color:var(--red)}.rate span{font-size:13px;color:var(--muted)}.arrow{font-size:35px;color:#ff455d}.explain{border-left:3px solid var(--red);padding-left:18px;margin-top:20px;color:#c2cad6}
-.barrow{display:grid;grid-template-columns:210px 1fr 90px;gap:14px;align-items:center;margin:14px 0}.barlabel{font-size:13px}.bartrack{height:12px;background:#e7e9ed;border-radius:99px;overflow:hidden}.bar{height:100%;background:var(--red);border-radius:99px}.barvalue{text-align:right;font-weight:700;font-size:13px}
-.entity{display:grid;grid-template-columns:1.5fr .7fr 1fr;gap:12px;padding:13px 0;border-bottom:1px solid var(--line);font-size:13px}.entity.head{font-weight:800;color:#5e6671}.callout{background:var(--soft);border-left:4px solid var(--red);padding:22px;border-radius:0 12px 12px 0;margin-top:24px}.callout strong{display:block;margin-bottom:7px}.checklist{counter-reset:item;display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.check{background:#fff;border:1px solid var(--line);padding:20px;border-radius:12px}.check:before{counter-increment:item;content:counter(item);display:inline-grid;place-items:center;width:27px;height:27px;border-radius:50%;background:var(--ink);color:#fff;font-weight:800;font-size:12px;margin-right:9px}.check strong{font-size:14px}.check p{color:var(--muted);font-size:13px;margin-top:10px}
-.disclaimer{font-size:12px;color:#727984;background:#fff;border:1px solid var(--line);padding:18px;border-radius:10px;margin-top:24px}.sources a{color:#b4102a}.sources li{margin:11px 0;color:#555d68}
-footer{background:#080e18;color:#8f99a8;padding:38px 22px;font-size:12px}footer .wrap{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-@media(max-width:900px){.grid,.grid4{grid-template-columns:1fr 1fr}.links{display:none}.bridge{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}.entity{grid-template-columns:1fr}.entity.head{display:none}.barrow{grid-template-columns:1fr 70px}.bartrack{grid-column:1/-1;grid-row:2}.checklist{grid-template-columns:1fr}}
-@media(max-width:600px){.grid,.grid4{grid-template-columns:1fr}.hero{padding:58px 20px}.hero h1{font-size:43px}.kpi .value{font-size:28px}section{padding:54px 20px}}
+:root{--navy:#0b1729;--navy2:#14233b;--red:#ed1b2f;--ink:#20242c;--muted:#687282;--bg:#f5f6f8;--line:#dde2e8;--soft:#fff3f4;--green:#0d7a5f}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.5}nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line)}.nav{max-width:1120px;margin:auto;padding:16px 22px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:800}.brand span{color:var(--red)}.links{display:flex;gap:22px;font-size:13px}.links a{color:#404752;text-decoration:none}.hero{background:var(--navy);color:white}.wrap{max-width:1120px;margin:auto;padding:72px 22px}.eyebrow{color:#ff4052;font-size:12px;font-weight:800;letter-spacing:2px;text-transform:uppercase}.hero h1{font-size:64px;line-height:1.03;max-width:900px;margin:20px 0}.hero h1 span{color:#ff4052}.hero p{font-size:18px;color:#c5ccd7;max-width:790px}.meta{display:flex;flex-wrap:wrap;gap:28px;margin-top:42px;color:#aeb8c7;font-size:13px}section:nth-of-type(even){background:var(--bg)}h2{font-size:40px;line-height:1.15;margin:12px 0 14px}.lead{color:var(--muted);max-width:830px;margin-bottom:30px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.card{background:white;border:1px solid var(--line);border-radius:14px;padding:22px}.card h3{margin:5px 0 8px;font-size:18px}.kpi{font-size:29px;font-weight:800;margin:8px 0}.small{font-size:12px;color:var(--muted)}.tag{font-size:11px;color:var(--red);font-weight:800;text-transform:uppercase}.callout{margin-top:20px;padding:18px 20px;border-left:4px solid var(--red);background:var(--soft);border-radius:0 12px 12px 0}.dark{background:var(--navy)!important;color:white}.dark .lead,.dark .small{color:#b8c2d1}.dark .card{background:var(--navy2);border-color:#31415c}.etr{display:grid;grid-template-columns:1fr 50px 1fr;align-items:center;gap:10px}.rate{background:white;color:var(--red);border-radius:14px;text-align:center;padding:28px;font-size:48px;font-weight:800}.arrow{text-align:center;color:#ff4052;font-size:30px}.bridge{margin-top:24px}.row{display:grid;grid-template-columns:1.7fr .7fr .7fr;gap:12px;padding:11px 0;border-bottom:1px solid #33415a}.row strong:last-child{text-align:right}.matrix{overflow-x:auto}.matrix table{width:100%;border-collapse:collapse;background:white;border-radius:14px;overflow:hidden}.matrix th,.matrix td{text-align:left;padding:14px;border-bottom:1px solid var(--line);font-size:13px;vertical-align:top}.matrix th{font-size:11px;text-transform:uppercase;color:var(--muted)}.entity{border-top:3px solid var(--red)}.entity .ownership{font-size:13px;font-weight:700}.question{color:#9b2632;font-size:13px}.num{display:inline-flex;width:28px;height:28px;border-radius:50%;background:var(--navy);color:white;align-items:center;justify-content:center;font-weight:800;margin-right:8px}.sourcebox{padding:20px;border:1px solid var(--line);border-radius:12px;background:white}.sourcebox a{color:#b51225}.pill{display:inline-block;padding:5px 8px;border-radius:5px;font-size:10px;font-weight:800;margin-right:6px;background:#e9eef5;color:#40506a}.pill.tax{background:#ffe6e9;color:#b51225}.pill.calc{background:#e4f5ef;color:var(--green)}footer{background:#08111f;color:#9ca8b8;padding:35px 22px}.foot{max-width:1120px;margin:auto;display:flex;justify-content:space-between;font-size:12px}@media(max-width:800px){.links{display:none}.hero h1{font-size:44px}.wrap{padding:52px 20px}.grid,.grid2{grid-template-columns:1fr}.etr{grid-template-columns:1fr}.arrow{transform:rotate(90deg)}h2{font-size:34px}.row{grid-template-columns:1fr .5fr .5fr}}
 </style>
 </head>
 <body>
-<nav><div class="nav"><div class="brand">SCOTIABANK <span>CHILE</span></div><div class="links">
-<a href="#overview">Overview</a><a href="#business">Negocio</a><a href="#structure">Estructura</a><a href="#financial">Finanzas</a><a href="#tax">Tax</a><a href="#onboarding">Onboarding</a><a href="#sources">Fuentes</a>
-</div></div></nav>
-
-<header class="hero"><div class="wrap">
-<div class="eyebrow">Executive Corporate Tax Brief · Junio 2026</div>
-<h1>Entender el banco desde una <span>mirada tributaria.</span></h1>
-<p class="lead">Guía ejecutiva de onboarding para conectar estructura legal, modelo de negocio, estados financieros e información tributaria pública de Scotiabank Chile.</p>
-<div class="meta"><span>Base · EEFF Consolidados Intermedios</span><span>Corte · 30.06.2026</span><span>Moneda · MM$ salvo indicación</span></div>
-</div></header>
-
-<section id="overview"><div class="wrap">
-<div class="label">01 · Executive Overview</div><h2>La lectura de Tax comienza antes de la nota de impuestos.</h2>
-<p class="intro">El objetivo es comprender qué entidades y negocios producen las cifras consolidadas y, desde ahí, localizar las partidas que pueden generar diferencias entre reconocimiento financiero y tratamiento tributario.</p>
-<div class="badges"><span class="badge reported">REPORTED · cifra publicada</span><span class="badge calculated">CALCULATED · cálculo sobre cifras públicas</span><span class="badge tax">TAX LENS · lectura de onboarding</span></div>
-<div class="grid">
-<div class="card"><div class="num">CONTROL</div><h3>The Bank of Nova Scotia</h3><p>El grupo canadiense es el controlador último. Nova Scotia Inversiones Ltda. concentra 99,80% de las acciones de Scotiabank Chile.</p><div class="source">EEFF Jun-26 · Nota 1 / información corporativa</div></div>
-<div class="card"><div class="num">PERÍMETRO</div><h3>Banco + filiales</h3><p>Los estados consolidados incorporan sociedades de fondos, seguros, cobranza, leasing, bolsa, asesoría, tarjetas y el negocio CAT.</p><div class="source">EEFF Jun-26 · Nota 1</div></div>
-<div class="card"><div class="num">TAX LENS</div><h3>Consolidado no es entidad legal</h3><p>La consolidación elimina saldos y transacciones intragrupo. Para Corporate Tax, la entidad legal, su base tributaria y sus operaciones relacionadas siguen siendo dimensiones esenciales.</p></div>
-</div>
-</div></section>
-
-<section id="business" class="white"><div class="wrap">
-<div class="label">02 · Business Model</div><h2>¿Dónde se genera el resultado?</h2>
-<p class="intro">Scotiabank reporta cinco segmentos. Para onboarding tributario, el punto no es sólo cuánto gana cada uno, sino qué productos, activos y operaciones hay detrás.</p>
-<div class="grid">
-<div class="card segment"><div class="num">RETAIL</div><h3>Personas & Pyme</h3><p>Banca de personas y pequeñas/medianas empresas: créditos, depósitos y servicios financieros.</p><div class="profit">MM$102.488</div><div class="sub">utilidad del segmento · 1S26</div></div>
-<div class="card segment"><div class="num">WHOLESALE</div><h3>Empresas & Corporativas</h3><p>Clientes empresariales y corporativos, incluyendo financiamiento y soluciones de mercados.</p><div class="profit">MM$107.963</div><div class="sub">utilidad del segmento · 1S26</div></div>
-<div class="card segment"><div class="num">CAT</div><h3>Tarjetas & consumo</h3><p>Negocio financiero asociado principalmente a Cencosud y productos de crédito de consumo.</p><div class="profit">MM$5.347</div><div class="sub">utilidad del segmento · 1S26</div></div>
-<div class="card segment"><div class="num">TESORERÍA</div><h3>Balance & mercados</h3><p>Gestión de liquidez y exposiciones a tasa, moneda e inflación, entre otras funciones.</p><div class="profit">MM$15.963</div><div class="sub">utilidad del segmento · 1S26</div></div>
-<div class="card segment"><div class="num">OTROS</div><h3>Resto corporativo</h3><p>Agrupa resultados y partidas no asignadas a los segmentos anteriores.</p><div class="profit">MM$35.681</div><div class="sub">utilidad del segmento · 1S26</div></div>
-</div>
-<div class="source">Fuente: EEFF Jun-26 · información por segmentos. Las utilidades de segmentos suman la utilidad consolidada de MM$267.442.</div>
-</div></section>
-
-<section id="structure"><div class="wrap">
-<div class="label">03 · Legal Entity Map</div><h2>El perímetro societario importa para Tax.</h2>
-<p class="intro">Vista ejecutiva de las sociedades consolidadas identificadas en los EEFF. Los porcentajes deben leerse como participación directa/indirecta reportada y no como sustituto del análisis tributario por RUT.</p>
-<div class="panel">
-<div class="entity head"><span>Entidad / vehículo</span><span>Participación</span><span>Función</span></div>
-<div class="entity"><strong>Scotia Administradora General de Fondos Chile S.A.</strong><span>99,33% + 0,67%</span><span>Administración de fondos</span></div>
-<div class="entity"><strong>Scotia Corredora de Seguros Chile Ltda.</strong><span>99,90% + 0,10%</span><span>Corretaje de seguros</span></div>
-<div class="entity"><strong>Scotia Corredora de Bolsa Chile S.A.</strong><span>99,19% + 0,80%</span><span>Intermediación de valores</span></div>
-<div class="entity"><strong>Scotia Operadora de Tarjetas de Pago Chile S.A.</strong><span>99,90% + 0,10%</span><span>Operación de tarjetas</span></div>
-<div class="entity"><strong>CAT Administradora de Tarjetas S.A.</strong><span>51%</span><span>Tarjetas / consumo</span></div>
-<div class="entity"><strong>CAT Corredores de Seguros y Servicios S.A.</strong><span>51%</span><span>Seguros / servicios</span></div>
-<div class="entity"><strong>Otras filiales consolidadas</strong><span>Ver Nota 1</span><span>Cobranza, leasing, asesorías y otros vehículos</span></div>
-</div>
-<div class="callout"><strong>Tax Lens · ¿qué preguntar al ingresar?</strong>¿Cuál es el régimen tributario y RUT de cada entidad? ¿Qué operaciones intercompañía existen? ¿Qué saldos se eliminan contablemente pero requieren trazabilidad fiscal? ¿Qué filiales generan pérdidas tributarias, dividendos o impuestos diferidos?</div>
-<div class="source">EEFF Jun-26 · Nota 1. Para trabajo operativo, validar el listado legal completo y porcentajes contra los EEFF individuales y registros internos.</div>
-</div></section>
-
-<section id="financial" class="white"><div class="wrap">
-<div class="label">04 · Financial Snapshot</div><h2>El tamaño y composición del balance.</h2>
-<p class="intro">Una lectura tributaria útil necesita escala. Estas cifras permiten dimensionar dónde se concentran los activos, resultados y potenciales diferencias temporarias.</p>
-<div class="grid4">
-<div class="kpi"><div class="value">$43.639.838</div><div class="name">Activos</div><div class="note">MM$ · 30.06.26</div></div>
-<div class="kpi"><div class="value">$39.596.382</div><div class="name">Pasivos</div><div class="note">MM$ · 30.06.26</div></div>
-<div class="kpi"><div class="value">$4.043.456</div><div class="name">Patrimonio</div><div class="note">MM$ · 30.06.26</div></div>
-<div class="kpi"><div class="value">$31.390.893</div><div class="name">Colocaciones</div><div class="note">MM$ · cartera a clientes</div></div>
-</div>
-<div style="height:18px"></div>
-<div class="grid">
-<div class="kpi"><div class="value">$935.761</div><div class="name">Ingresos operacionales</div><div class="note">MM$ · 1S26</div></div>
-<div class="kpi"><div class="value">$325.580</div><div class="name">Resultado antes de impuestos</div><div class="note">MM$ · 1S26</div></div>
-<div class="kpi"><div class="value">$267.442</div><div class="name">Utilidad consolidada</div><div class="note">MM$ · 1S26 · atribuible a propietarios: MM$264.698</div></div>
-</div>
-<div class="callout"><strong>Composición de colocaciones</strong>Comerciales MM$12.324.217 · Vivienda MM$14.740.571 · Consumo MM$4.326.105. La cartera de crédito es especialmente relevante al conectar provisiones, deterioro, castigos y tratamiento tributario.</div>
-<div class="source">EEFF Jun-26 · Estado de Situación Financiera y Estado de Resultados.</div>
-</div></section>
-
-<section id="tax" class="dark"><div class="wrap">
-<div class="label">05 · Corporate Tax Dashboard</div><h2>De 27,0% legal a 17,86% efectiva.</h2>
-<p class="intro">La conciliación de tasa es una de las mejores puertas de entrada para entender qué elementos separan el resultado contable del gasto tributario reconocido.</p>
-<div class="bridge">
-<div class="rate"><strong>27,0%</strong><span>tasa aplicada al resultado antes de impuestos</span></div>
-<div class="arrow">→</div>
-<div class="rate"><strong>17,86%</strong><span>tasa efectiva total reportada · 1S26</span></div>
-</div>
-<div class="grid">
-<div class="panel"><div class="num">RESULTADO ANTES DE IMPUESTOS</div><h3>MM$325.580</h3><p>Base contable desde la que parte la lectura de conciliación.</p></div>
-<div class="panel"><div class="num">27% TEÓRICO</div><h3>MM$87.908</h3><p>Impuesto que resultaría de aplicar 27% al resultado antes de impuestos.</p></div>
-<div class="panel"><div class="num">GASTO REPORTADO</div><h3>MM$58.138</h3><p>Cargo neto por impuesto a la renta reconocido en resultados.</p></div>
-</div>
-<div class="explain"><strong>Principal efecto destacado:</strong> la conciliación reporta MM$(38.751) por corrección monetaria del patrimonio tributario, equivalente a aproximadamente -11,90 puntos porcentuales de la conciliación. No debe interpretarse aisladamente como ahorro fiscal permanente: es una partida de conciliación que requiere entender su naturaleza y recurrencia.</div>
-<div class="source">EEFF Jun-26 · Nota 18 — Impuestos.</div>
-</div></section>
-
-<section class="white"><div class="wrap">
-<div class="label">06 · Deferred Tax Map</div><h2>MM$496.654 en activos por impuestos diferidos.</h2>
-<p class="intro">El mapa de diferencias temporarias muestra dónde la contabilidad y la base tributaria se separan. Las barras dimensionan los principales activos por impuestos diferidos reportados.</p>
-<div class="grid">
-<div class="kpi"><div class="value">$496.654</div><div class="name">Activo por impuesto diferido</div><div class="note">MM$ · Jun-26</div></div>
-<div class="kpi"><div class="value">$457.136</div><div class="name">Activo por impuesto diferido</div><div class="note">MM$ · Dic-25</div></div>
-<div class="kpi"><div class="value">$695</div><div class="name">Pasivo por impuesto diferido</div><div class="note">MM$ · Jun-26</div></div>
-</div>
-<div style="margin-top:32px">
-<div class="barrow"><div class="barlabel">Provisiones sobre colocaciones</div><div class="bartrack"><div class="bar" style="width:100%"></div></div><div class="barvalue">273.358</div></div>
-<div class="barrow"><div class="barlabel">Operaciones de leasing</div><div class="bartrack"><div class="bar" style="width:37%"></div></div><div class="barvalue">101.061</div></div>
-<div class="barrow"><div class="barlabel">Devengo suspendido cartera deteriorada</div><div class="bartrack"><div class="bar" style="width:9.8%"></div></div><div class="barvalue">26.720</div></div>
-<div class="barrow"><div class="barlabel">Otros intangibles</div><div class="bartrack"><div class="bar" style="width:5.3%"></div></div><div class="barvalue">14.379</div></div>
-<div class="barrow"><div class="barlabel">Activo fijo · diferencia tributario-financiera</div><div class="bartrack"><div class="bar" style="width:4.5%"></div></div><div class="barvalue">12.344</div></div>
-<div class="barrow"><div class="barlabel">Beneficios a empleados</div><div class="bartrack"><div class="bar" style="width:4.5%"></div></div><div class="barvalue">12.176</div></div>
-<div class="barrow"><div class="barlabel">MTM instrumentos financieros</div><div class="bartrack"><div class="bar" style="width:4%"></div></div><div class="barvalue">10.796</div></div>
-<div class="barrow"><div class="barlabel">Pérdidas tributarias de filiales</div><div class="bartrack"><div class="bar" style="width:1.9%"></div></div><div class="barvalue">5.195</div></div>
-</div>
-<div class="callout"><strong>Tax Lens</strong>Las provisiones sobre colocaciones y el leasing concentran una parte material del activo diferido. Para onboarding, son dos procesos prioritarios para entender reglas de reconocimiento, reversos, bases tributarias, controles y conciliaciones.</div>
-<div class="source">MM$ · EEFF Jun-26 · Nota 18. Las barras son una visualización propia sobre cifras publicadas.</div>
-</div></section>
-
-<section><div class="wrap">
-<div class="label">07 · Credit Risk → Tax</div><h2>Provisiones y castigos: un punto específicamente bancario.</h2>
-<p class="intro">Los EEFF incluyen información tributaria asociada a operaciones crediticias bajo la Circular Conjunta SII N.º47 / CMF N.º3.478 y el artículo 31 N.º4 de la LIR.</p>
-<div class="grid">
-<div class="kpi"><div class="value">$124.982</div><div class="name">Castigos directos</div><div class="note">MM$ · art. 31 N.º4, según revelación EEFF</div></div>
-<div class="kpi"><div class="value">$32.431</div><div class="name">Recuperaciones / renegociaciones</div><div class="note">MM$ · créditos castigados</div></div>
-<div class="card"><div class="num">ALCANCE</div><h3>Banco, no todo el consolidado</h3><p>La revelación indicada se refiere a operaciones crediticias del Banco y establece exclusiones específicas. Esto refuerza la necesidad de distinguir perímetro consolidado de sujeto tributario.</p></div>
-</div>
-<div class="source">EEFF Jun-26 · Nota 18 · revelación Circular Conjunta SII/CMF.</div>
-</div></section>
-
-<section class="white"><div class="wrap">
-<div class="label">08 · Capital & Distributions</div><h2>La utilidad también se conecta con patrimonio y distribuciones.</h2>
-<div class="grid">
-<div class="kpi"><div class="value">70%</div><div class="name">Utilidades 2025 distribuidas</div><div class="note">acuerdo de Junta Ordinaria · abril 2026</div></div>
-<div class="kpi"><div class="value">$303.734</div><div class="name">Dividendo total aprox.</div><div class="note">MM$</div></div>
-<div class="kpi"><div class="value">$24,80496</div><div class="name">Dividendo por acción</div><div class="note">$ por acción</div></div>
-</div>
-<div class="callout"><strong>Tax Lens</strong>En onboarding, conectar distribuciones con registros tributarios, tratamiento de dividendos, controlador y flujos intragrupo usando antecedentes internos. La cifra pública es el punto de partida, no el análisis tributario completo.</div>
-<div class="source">EEFF Jun-26 · información de patrimonio/dividendos.</div>
-</div></section>
-
-<section id="onboarding"><div class="wrap">
-<div class="label">09 · Tax Onboarding Map</div><h2>Qué entender durante las primeras semanas.</h2>
-<p class="intro">Checklist de investigación interna sugerido a partir de las áreas que aparecen materialmente en los estados financieros.</p>
-<div class="checklist">
-<div class="check"><strong>Mapa de entidades</strong><p>RUT, régimen, ownership, responsables, declaraciones y calendario de cada sociedad.</p></div>
-<div class="check"><strong>Tax provision</strong><p>Proceso mensual/trimestral, conciliación tasa efectiva, current/deferred tax y controles.</p></div>
-<div class="check"><strong>Créditos y provisiones</strong><p>Puente financiero-tributario para deterioro, provisiones, castigos y recuperaciones.</p></div>
-<div class="check"><strong>Leasing</strong><p>Diferencias de reconocimiento, bases tributarias y reversos que explican impuesto diferido.</p></div>
-<div class="check"><strong>Intercompany</strong><p>Servicios, saldos, financiamientos, eliminaciones de consolidación y documentación tributaria.</p></div>
-<div class="check"><strong>Instrumentos financieros</strong><p>MTM, derivados, coberturas y diferencias de timing entre medición contable y fiscal.</p></div>
-<div class="check"><strong>Activos e intangibles</strong><p>Vidas útiles, amortización/depreciación, costo tributario y diferencias temporarias.</p></div>
-<div class="check"><strong>Capital y dividendos</strong><p>Registros tributarios, distribuciones, flujos hacia accionistas y evidencia de soporte.</p></div>
-</div>
-<div class="disclaimer"><strong>Alcance:</strong> este sitio es material de estudio elaborado a partir de información pública. “Tax Lens” identifica preguntas y áreas de atención; no constituye una conclusión tributaria, asesoría legal ni representa una posición oficial de Scotiabank Chile. Los tratamientos deben validarse con normativa vigente, antecedentes por entidad y documentación interna.</div>
-</div></section>
-
-<section id="sources" class="white"><div class="wrap">
-<div class="label">10 · Sources & Methodology</div><h2>Trazabilidad antes que decoración.</h2>
-<p class="intro">Las cifras “Reported” provienen de información pública; las visualizaciones y ratios “Calculated” son elaboración propia; “Tax Lens” corresponde a preguntas de análisis y onboarding.</p>
-<ul class="sources">
-<li><a href="https://www.scotiabankchile.cl/investor-relations/Estados-financieros" target="_blank" rel="noopener">Scotiabank Chile · Estados Financieros</a> — repositorio oficial.</li>
-<li><a href="https://cdn.aglty.io/scotiabank-chile/scotiabankpdf/conocenos/edos_financ/memoria_eeff/2026/Estados-Financieros-Intermedios-Consolidados-Scotiabank-Junio-2026.pdf" target="_blank" rel="noopener">Estados Financieros Consolidados Intermedios al 30 de junio de 2026</a> — fuente primaria del análisis.</li>
-</ul>
-<div class="disclaimer">Las referencias de notas se presentan para facilitar navegación. Antes de utilizar una cifra en un entregable profesional, verificarla directamente contra la versión oficial vigente del documento y su contexto completo.</div>
-</div></section>
-
-<footer><div class="wrap"><span>Scotiabank Chile · Executive Corporate Tax Brief</span><span>Estudio independiente basado en información pública · Junio 2026</span></div></footer>
-</body>
-</html>
+<nav><div class="nav"><div class="brand">SCOTIABANK <span>CHILE</span></div><div class="links"><a href="#overview">Overview</a><a href="#business">Negocio</a><a href="#entities">Entidades</a><a href="#financials">Finanzas</a><a href="#tax">Tax</a><a href="#onboarding">Onboarding</a><a href="#sources">Fuentes</a></div></div></nav>
+<header class="hero"><div class="wrap"><div class="eyebrow">Corporate Tax Onboarding Map · V3 · Junio 2026</div><h1>Del consolidado a la <span>entidad tributaria.</span></h1><p>Resumen ejecutivo para incorporarse a Corporate Tax: conecta modelo de negocio, perímetro societario, estados financieros, conciliación de tasa efectiva y principales diferencias temporarias de Scotiabank Chile.</p><div class="meta"><span>Base · EEFF Consolidados Intermedios</span><span>Corte · 30.06.2026</span><span>Moneda · MM$ salvo indicación</span><span>Enfoque · onboarding, no asesoría tributaria</span></div></div></header>
+<section id="overview"><div class="wrap"><div class="eyebrow">01 · Executive overview</div><h2>Primero: separar grupo, negocio y sujeto tributario.</h2><p class="lead">Los EEFF son consolidados: eliminan saldos y transacciones intragrupo. Corporate Tax, en cambio, necesita reconstruir la lectura por entidad, RUT, régimen, base tributaria, transacciones relacionadas y soportes.</p><div><span class="pill">REPORTED</span><span class="pill calc">CALCULATED / VISUAL</span><span class="pill tax">TAX LENS</span></div><div class="grid" style="margin-top:18px"><div class="card"><div class="tag">Control</div><h3>The Bank of Nova Scotia</h3><p>El controlador económico último es canadiense; Nova Scotia Inversiones Ltda. posee 99,80% de Scotiabank Chile.</p><div class="small">Nota 28 · propiedad al 30.06.2026</div></div><div class="card"><div class="tag">Perímetro</div><h3>Banco + 12 entidades controladas</h3><p>La Nota 2 identifica doce sociedades que forman parte de la consolidación a junio de 2026.</p><div class="small">Nota 2 · bases de consolidación</div></div><div class="card"><div class="tag">Tax Lens</div><h3>Consolidado ≠ contribuyente</h3><p>El mapa operativo debe bajar a entidad legal: impuestos corrientes, diferidos, intercompany, dividendos, pérdidas y documentación.</p></div></div></div></section>
+<section id="business"><div class="wrap"><div class="eyebrow">02 · Business model</div><h2>¿Dónde se genera el resultado?</h2><p class="lead">La Nota 6 reporta cinco segmentos. Para Tax, la utilidad por segmento sirve como mapa económico; no reemplaza la determinación fiscal por entidad.</p><div class="grid"><div class="card"><div class="tag">Retail</div><h3>Banca minorista</h3><div class="kpi">MM$102.488</div><div class="small">utilidad 1S26 · colocaciones MM$19.600.701</div></div><div class="card"><div class="tag">Wholesale</div><h3>Empresas & corporativas</h3><div class="kpi">MM$107.963</div><div class="small">utilidad 1S26 · colocaciones MM$9.740.073</div></div><div class="card"><div class="tag">CAT</div><h3>Tarjetas & consumo</h3><div class="kpi">MM$5.347</div><div class="small">utilidad 1S26 · colocaciones MM$1.953.195</div></div><div class="card"><div class="tag">Tesorería</div><h3>Balance & mercados</h3><div class="kpi">MM$15.963</div><div class="small">utilidad 1S26</div></div><div class="card"><div class="tag">Otros</div><h3>Resto corporativo</h3><div class="kpi">MM$35.681</div><div class="small">utilidad 1S26</div></div></div><div class="callout"><strong>Tax Lens:</strong> el impuesto asignado por segmentos suma MM$(58.138), pero la declaración y los controles fiscales deben seguir la arquitectura legal y los procesos que originan cada partida.</div></div></section>
+<section id="entities"><div class="wrap"><div class="eyebrow">03 · Legal entity map</div><h2>El perímetro societario completo.</h2><p class="lead">V3 amplía la tabla a las 12 sociedades controladas que la Nota 2 identifica en la consolidación. “Directa + indirecta” se muestra exactamente como participación reportada, sin convertirla en una conclusión tributaria.</p><div class="grid">
+<div class="card entity"><h3>Scotia Administradora General de Fondos Chile S.A.</h3><div class="ownership">99,33% directa + 0,67% indirecta</div><p>Gestión y administración de fondos.</p><div class="question">Tax: IVA/servicios, remuneraciones, intercompany y dividendos.</div></div>
+<div class="card entity"><h3>Scotia Corredora de Seguros Chile Ltda.</h3><div class="ownership">99,90% + 0,10%</div><p>Intermediación de seguros.</p><div class="question">Tax: comisiones, IVA aplicable y servicios relacionados.</div></div>
+<div class="card entity"><h3>Centro de Recuperación y Cobranza Ltda.</h3><div class="ownership">99,90% + 0,10%</div><p>Recuperación y cobranza.</p><div class="question">Tax: servicios al banco, precios/cargos intercompany y documentación.</div></div>
+<div class="card entity"><h3>Bandesarrollo Sociedad de Leasing Inmobiliario S.A.</h3><div class="ownership">99,91% directa</div><p>Leasing inmobiliario.</p><div class="question">Tax: base tributaria de activos, depreciación y timing financiero-fiscal.</div></div>
+<div class="card entity"><h3>CAT Administradora de Tarjetas S.A.</h3><div class="ownership">51,00% directa</div><p>Negocio asociado a tarjetas.</p><div class="question">Tax: interés no controlador, gastos, servicios y distribución.</div></div>
+<div class="card entity"><h3>CAT Corredores de Seguros y Servicios S.A.</h3><div class="ownership">51,00% directa</div><p>Seguros y servicios.</p><div class="question">Tax: ingresos por comisiones, IVA y transacciones relacionadas.</div></div>
+<div class="card entity"><h3>Servicios Integrales S.A.</h3><div class="ownership">51,00% directa</div><p>Servicios dentro del perímetro consolidado.</p><div class="question">Tax: naturaleza de servicios, markup, IVA y soporte contractual.</div></div>
+<div class="card entity"><h3>Administradora y Procesos S.A.</h3><div class="ownership">51,00% directa</div><p>Procesos y servicios operativos.</p><div class="question">Tax: cargos intragrupo, centros de costo y trazabilidad documental.</div></div>
+<div class="card entity"><h3>Scotia Corredora de Bolsa Chile Ltda.</h3><div class="ownership">99,19% + 0,80%</div><p>Intermediación de valores.</p><div class="question">Tax: instrumentos financieros, MTM, comisiones y diferencias temporarias.</div></div>
+<div class="card entity"><h3>Scotia Asesorías Financieras Ltda.</h3><div class="ownership">98,74% directa</div><p>Asesoría financiera.</p><div class="question">Tax: servicios, precios de transferencia/relacionados y gastos atribuibles.</div></div>
+<div class="card entity"><h3>Scotia Azul Sociedad de Leasing Inmobiliario S.A.</h3><div class="ownership">97,49% directa</div><p>Leasing inmobiliario.</p><div class="question">Tax: activos subyacentes, depreciación, contratos y diferidos.</div></div>
+<div class="card entity"><h3>Scotia Operadora de Tarjetas de Pago S.A.</h3><div class="ownership">99,90% + 0,10%</div><p>Operación de tarjetas de pago.</p><div class="question">Tax: fees, servicios tecnológicos/operacionales, IVA e intercompany.</div></div>
+</div><div class="callout"><strong>Pregunta de entrada:</strong> para cada sociedad, obtener RUT, régimen, F22/F29, RLI, registros tributarios, tax provision, responsables, calendario, contratos relacionados y conciliación contable-tributaria.</div></div></section>
+<section id="financials"><div class="wrap"><div class="eyebrow">04 · Financial snapshot</div><h2>Escala del balance y del resultado.</h2><p class="lead">Estas magnitudes ubican dónde están los procesos que pueden originar diferencias permanentes o temporarias.</p><div class="grid"><div class="card"><div class="kpi">$43.639.838</div><div class="small">ACTIVOS · MM$</div></div><div class="card"><div class="kpi">$39.596.382</div><div class="small">PASIVOS · MM$</div></div><div class="card"><div class="kpi">$4.043.456</div><div class="small">PATRIMONIO · MM$</div></div><div class="card"><div class="kpi">$31.390.893</div><div class="small">COLOCACIONES · MM$</div></div><div class="card"><div class="kpi">$325.580</div><div class="small">RESULTADO ANTES DE IMPUESTOS · 1S26</div></div><div class="card"><div class="kpi">$267.442</div><div class="small">UTILIDAD CONSOLIDADA · 1S26</div></div></div><div class="callout"><strong>Crédito:</strong> comerciales MM$12.324.217 · vivienda MM$14.740.571 · consumo MM$4.326.105. El puente crédito → provisión → castigo → recuperación → base tributaria es un frente central de onboarding.</div></div></section>
+<section id="tax" class="dark"><div class="wrap"><div class="eyebrow">05 · Effective tax rate bridge</div><h2>De 27,00% legal a 17,86% efectiva.</h2><p class="lead">V3 incorpora la conciliación completa publicada en Nota 18, evitando atribuir toda la brecha a una sola partida.</p><div class="etr"><div class="rate">27,00%</div><div class="arrow">→</div><div class="rate">17,86%</div></div><div class="bridge"><div class="row"><span>Impuesto teórico sobre resultado antes de impuestos</span><strong>27,00%</strong><strong>MM$87.908</strong></div><div class="row"><span>Corrección monetaria patrimonio tributario</span><strong>(11,90%)</strong><strong>MM$(38.751)</strong></div><div class="row"><span>Otras diferencias permanentes</span><strong>0,16%</strong><strong>MM$519</strong></div><div class="row"><span>Efecto año anterior</span><strong>0,06%</strong><strong>MM$191</strong></div><div class="row"><span>Otros</span><strong>2,53%</strong><strong>MM$8.251</strong></div><div class="row"><span>Tasa efectiva / impuesto año corriente</span><strong>17,85%</strong><strong>MM$58.118</strong></div><div class="row"><span>Impuesto único Art. 21</span><strong>0,01%</strong><strong>MM$20</strong></div><div class="row"><span><b>Total gasto por impuesto a la renta</b></span><strong>17,86%</strong><strong>MM$58.138</strong></div></div><div class="callout" style="background:#192941"><strong>Tax Lens:</strong> para el onboarding, la pregunta no es sólo “por qué baja la tasa”, sino qué cuenta, entidad, cálculo y evidencia soportan cada línea y cuáles son recurrentes.</div></div></section>
+<section><div class="wrap"><div class="eyebrow">06 · Deferred tax operating map</div><h2>MM$496.654 de activo por impuesto diferido.</h2><p class="lead">La Nota 18 permite convertir el saldo en un mapa de procesos. La columna “lectura de onboarding” es una guía analítica, no una conclusión fiscal.</p><div class="matrix"><table><thead><tr><th>Partida</th><th>MM$</th><th>Proceso origen</th><th>Lectura de onboarding</th></tr></thead><tbody>
+<tr><td>Provisiones sobre colocaciones</td><td><b>273.358</b></td><td>Crédito / riesgo</td><td>Entender reconocimiento contable, deducibilidad, reversos y conciliación con castigos.</td></tr>
+<tr><td>Operaciones de leasing</td><td><b>101.061</b></td><td>Leasing</td><td>Mapear valor financiero vs. tributario, depreciación y calendario de reverso.</td></tr>
+<tr><td>Devengo suspendido cartera deteriorada</td><td><b>26.720</b></td><td>Crédito deteriorado</td><td>Identificar cuándo se reconoce financieramente y cuándo integra base fiscal.</td></tr>
+<tr><td>Otros intangibles</td><td><b>14.379</b></td><td>Activos / tecnología</td><td>Vida útil, amortización financiera y tratamiento tributario.</td></tr>
+<tr><td>Activo fijo</td><td><b>12.344</b></td><td>Activo fijo</td><td>Depreciación financiera vs. tributaria y control de bases.</td></tr>
+<tr><td>Beneficios a empleados</td><td><b>12.176</b></td><td>RR.HH.</td><td>Devengo, pago, deducibilidad y reverso.</td></tr>
+<tr><td>MTM instrumentos financieros</td><td><b>10.796</b></td><td>Tesorería</td><td>Valor razonable, realización y timing fiscal.</td></tr>
+<tr><td>Pérdidas tributarias de filiales</td><td><b>5.195</b></td><td>Filiales</td><td>Identificar qué entidades originan pérdidas y evidencia de recuperabilidad.</td></tr>
+</tbody></table></div><div class="grid" style="margin-top:18px"><div class="card"><div class="kpi">MM$496.654</div><div class="small">activo por impuesto diferido · Jun-26</div></div><div class="card"><div class="kpi">MM$457.136</div><div class="small">activo por impuesto diferido · Dic-25</div></div><div class="card"><div class="kpi">MM$695</div><div class="small">pasivo por impuesto diferido · Jun-26</div></div></div></div></section>
+<section><div class="wrap"><div class="eyebrow">07 · Credit risk → Tax</div><h2>La revelación tributaria de crédito tiene un perímetro específico.</h2><p class="lead">La Nota 18 indica que la revelación bajo Circular Conjunta SII N°47 / CMF N°3.478 corresponde sólo a operaciones de crédito del Banco y excluye filiales; además, la presentación individual indicada no incluye leasing ni factoring.</p><div class="grid"><div class="card"><div class="kpi">$124.982</div><div class="small">MM$ · castigos directos Art. 31 N°4 inciso segundo</div></div><div class="card"><div class="kpi">$32.431</div><div class="small">MM$ · recuperaciones o renegociaciones de créditos castigados</div></div><div class="card"><div class="tag">Alcance</div><h3>Banco, no todo el consolidado</h3><p>Ésta es una distinción operativa crítica al reconciliar cifras contables consolidadas con antecedentes tributarios.</p></div></div></div></section>
+<section><div class="wrap"><div class="eyebrow">08 · Capital & distributions</div><h2>Patrimonio, controlador y dividendos.</h2><div class="grid"><div class="card"><div class="kpi">99,80%</div><div class="small">Nova Scotia Inversiones Ltda. · participación en Scotiabank Chile</div></div><div class="card"><div class="kpi">70%</div><div class="small">utilidades 2025 acordadas distribuir · JOA 14.04.2026</div></div><div class="card"><div class="kpi">MM$303.734</div><div class="small">dividendos de acciones comunes pagados en 1S26</div></div></div><div class="callout"><strong>Tax Lens:</strong> conectar distribución con registros tributarios, calidad tributaria de utilidades, retenciones/efectos que correspondan, controlador y soporte societario. La cifra pública es el punto de partida, no la conclusión tributaria.</div></div></section>
+<section id="onboarding"><div class="wrap"><div class="eyebrow">09 · 30-day onboarding map</div><h2>Qué entender durante las primeras semanas.</h2><p class="lead">Orden sugerido para convertir los EEFF en un mapa operativo de Corporate Tax.</p><div class="grid2"><div class="card"><h3><span class="num">1</span>Entity master</h3><p>RUT, ownership, régimen, responsables, F22/F29, registros y calendario por sociedad.</p></div><div class="card"><h3><span class="num">2</span>Tax provision</h3><p>Current/deferred tax, ETR bridge, cuentas contables, controles y cierre mensual/trimestral.</p></div><div class="card"><h3><span class="num">3</span>Crédito y provisiones</h3><p>Conciliar deterioro, provisiones, castigos, recuperaciones y tratamiento Art. 31 N°4.</p></div><div class="card"><h3><span class="num">4</span>Leasing</h3><p>Base de activos, depreciación, diferencias temporarias y reversos.</p></div><div class="card"><h3><span class="num">5</span>Intercompany</h3><p>Servicios, saldos, financiamientos, eliminaciones, contratos y documentación tributaria.</p></div><div class="card"><h3><span class="num">6</span>Tesorería</h3><p>Derivados, MTM, coberturas, reajustes y timing contable-fiscal.</p></div><div class="card"><h3><span class="num">7</span>Filiales con DTA</h3><p>Identificar pérdidas tributarias, recuperabilidad, forecast y expiración cuando corresponda.</p></div><div class="card"><h3><span class="num">8</span>Capital y dividendos</h3><p>Registros, distribuciones, controlador, provisiones de dividendos y evidencia societaria.</p></div></div><div class="callout"><strong>Entregable recomendado al día 30:</strong> matriz Entity × Tax Process × Owner × Cuenta contable × Declaración × Control × Evidencia × Riesgo/Pregunta abierta.</div></div></section>
+<section id="sources"><div class="wrap"><div class="eyebrow">10 · Sources & methodology</div><h2>Trazabilidad antes que decoración.</h2><p class="lead">Las cifras “Reported” se toman de información pública de Scotiabank Chile. “Tax Lens” identifica preguntas de onboarding y no representa una posición oficial ni asesoría tributaria.</p><div class="sourcebox"><p><b>Fuente primaria:</b> Scotiabank Chile y Filiales — Estados Financieros Consolidados Intermedios al 30 de junio de 2026.</p><p><a href="https://cdn.aglty.io/scotiabank-chile/scotiabankpdf/conocenos/edos_financ/memoria_eeff/2026/Estados-Financieros-Intermedios-Consolidados-Scotiabank-Junio-2026.pdf" target="_blank" rel="noopener">Abrir EEFF oficiales junio 2026</a></p><p><a href="https://www.scotiabankchile.cl/investor-relations/Estados-financieros" target="_blank" rel="noopener">Repositorio oficial de Estados Financieros</a></p><div class="small">Referencias principales: Nota 2 (perímetro de consolidación), Nota 6 (segmentos), Nota 18 (impuestos y Circular SII/CMF), Nota 28 (patrimonio/dividendos) y estados primarios.</div></div></div></section>
+<footer><div class="foot"><span>Scotiabank Chile · Corporate Tax Onboarding Map V3</span><span>Estudio independiente basado en información pública · Junio 2026</span></div></footer>
+</body></html>
